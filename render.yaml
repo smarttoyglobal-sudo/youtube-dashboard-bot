@@ -1,0 +1,27 @@
+services:
+  - type: web
+    name: youtube-dashboard-bot
+    env: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: python telegram_bot_listener_final.py
+    envVars:
+      - key: YOUTUBE_API_KEY
+        sync: false
+      - key: TELEGRAM_BOT_TOKEN
+        sync: false
+      - key: TELEGRAM_CHAT_ID
+        sync: false
+
+  - type: cron
+    name: hourly-update
+    env: python
+    schedule: "0 * * * *"
+    buildCommand: pip install -r requirements.txt
+    startCommand: python youtube_dashboard_final_v4.py --telegram
+    envVars:
+      - key: YOUTUBE_API_KEY
+        sync: false
+      - key: TELEGRAM_BOT_TOKEN
+        sync: false
+      - key: TELEGRAM_CHAT_ID
+        sync: false

@@ -1,0 +1,31 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+*.egg-info/
+
+# Data files
+*.json
+channels.json
+youtube_history_*.json
+video_history_*.json
+
+# Chart images
+chart_*.png
+
+# Windows
+Thumbs.db
+*.bat
+
+# MacOS
+.DS_Store
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
