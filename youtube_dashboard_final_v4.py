@@ -89,7 +89,7 @@ def get_all_shorts(channel_id):
     """채널의 전체 쇼츠 영상 가져오기"""
     all_videos = []
     page_token = None
-    max_pages = 20  # 최대 1000개 영상 (50 x 20)
+    max_pages = 10  # 최대 1000개 영상 (50 x 20)
     
     print(f"  📹 전체 쇼츠 수집 중...", end="", flush=True)
     
