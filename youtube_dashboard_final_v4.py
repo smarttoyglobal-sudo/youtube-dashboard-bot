@@ -137,7 +137,7 @@ def get_all_shorts(channel_id):
                     duration_seconds = duration.total_seconds()
                     
                     # 쇼츠: 60초 이하
-                    if duration_seconds <= 60:
+                    if duration_seconds <= 90:
                         video_id = item["id"]
                         title = item["snippet"]["title"]
                         title_clean = re.sub(r'#.*$', '', title).strip()
