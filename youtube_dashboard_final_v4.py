@@ -430,8 +430,8 @@ def format_telegram_message(result):
         lines.append("")
     
     lines.append("━━━━━━━━━━━━━━━━━━━━━━━━━")
-    lines.append(f"⏰ 다음: {(datetime.now() + timedelta(hours=1)).strftime('%H:00')}")
-    
+   # lines.append(f"⏰ 다음: {(datetime.now() + timedelta(hours=1)).strftime('%H:00')}")
+     (주석처리)
     return "\n".join(lines)
 
 def send_telegram(message, image_paths=[]):
